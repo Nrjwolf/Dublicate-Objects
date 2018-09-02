@@ -48,6 +48,6 @@ public class DirectionDublicate : MonoBehaviour
         if (go == null || go.GetComponent<SpriteRenderer>() == null) return;
         var spriteRenderer = go.GetComponent<SpriteRenderer>();
 
-        go.transform.position += new Vector3(spriteRenderer.size.x * x, spriteRenderer.size.y * y);
+        go.transform.position += new Vector3(spriteRenderer.size.x * x * go.transform.localScale.x, spriteRenderer.size.y * y * go.transform.localScale.y);
     }
 }
